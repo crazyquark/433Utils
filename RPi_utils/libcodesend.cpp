@@ -12,6 +12,9 @@ decimalcode - As decoded by RFSniffer
 protocol    - According to rc-switch definitions
 pulselength - pulselength in microseconds
 */
+#ifdef __cplusplus
+extern "C"{
+#endif
 int codesend(int code, int pulseLength = 172, int protocol = 1, int pin = 0)
 {
 
@@ -37,3 +40,6 @@ int codesend(int code, int pulseLength = 172, int protocol = 1, int pin = 0)
 
     return 0;
 }
+#ifdef __cplusplus
+}
+#endif
