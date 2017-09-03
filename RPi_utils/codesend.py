@@ -7,4 +7,4 @@ print lib
 send = lib.send
 send.restype = c_int
 
-print send(4261203)
+send(4261203, 172, 1, 0)
