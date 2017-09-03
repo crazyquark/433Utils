@@ -7,6 +7,4 @@ print lib
 send = lib.send
 send.restype = c_int
 
-print 'Not running on target host'
-
 print send(4261203)
