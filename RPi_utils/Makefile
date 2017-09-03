@@ -1,6 +1,6 @@
 
 # Defines the RPI variable which is needed by rc-switch/RCSwitch.h
-CXXFLAGS=-DRPI
+CXXFLAGS=-DRPI -fPIC
 
 all: send codesend RFSniffer libcodesend.so
 
@@ -14,7 +14,7 @@ RFSniffer: ../rc-switch/RCSwitch.o RFSniffer.o
 	$(CXX) $(CXXFLAGS) $(LDFLAGS) $+ -o $@ -lwiringPi
 	
 libcodesend.so: ../rc-switch/RCSwitch.o libcodesend.o
-	$(CXX) $(CXXFLAGS) $(LDFLAGS) -fPIC -shared $+ -o $@ -lwiringPi
+	$(CXX) $(CXXFLAGS) $(LDFLAGS) -shared $+ -o $@ -lwiringPi
 	
 clean:
 	$(RM) ../rc-switch/*.o *.o send codesend servo RFSniffer
