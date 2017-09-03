@@ -12,7 +12,7 @@ decimalcode - As decoded by RFSniffer
 protocol    - According to rc-switch definitions
 pulselength - pulselength in microseconds
 */
-int send(int pin = 0, int protocol = 1, int code, int pulseLength)
+int send(int code, int pulseLength = 172, int protocol = 1, int pin = 0)
 {
 
     // This is a wiringPi pin number
