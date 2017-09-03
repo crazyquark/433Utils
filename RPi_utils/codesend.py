@@ -4,7 +4,8 @@ send = None
 
 lib = cdll.LoadLibrary('./libcodesend.so')
 print lib
-send = lib.send
+codesend = lib.codesend
 send.restype = c_int
 
-send(4261203, 172, 1, 0)
+res = codesend(4261203, 172, 1, 0)
+print 'Got: ', res
