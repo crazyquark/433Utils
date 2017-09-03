@@ -17,5 +17,5 @@ libcodesend.so: ../rc-switch/RCSwitch.o libcodesend.o
 	$(CXX) $(CXXFLAGS) $(LDFLAGS) -shared $+ -o $@ -lwiringPi
 	
 clean:
-	$(RM) ../rc-switch/*.o *.o send codesend servo RFSniffer
+	$(RM) ../rc-switch/*.o *.o *.so send codesend servo RFSniffer
 
