@@ -1,17 +1,12 @@
 from ctypes import cdll, c_int
 
-def main():
-    ''' Entrypoint '''
-    send = None
-    try:
-        lib = cdll.LoadLibrary('./libcodesend.so')
-        send = lib.send
-        send.restype = c_int
-    except:
-        print 'Not running on target host'
-        return
+send = None
 
-        print send
+lib = cdll.LoadLibrary('./libcodesend.so')
+print lib
+send = lib.send
+send.restype = c_int
 
-if __name__ == '__main__':
-    main()
+print 'Not running on target host'
+
+print send(4261203)
