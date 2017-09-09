@@ -3,7 +3,7 @@ from ctypes import cdll, c_int
 send = None
 
 lib = cdll.LoadLibrary('./libcodesend.so')
-print lib
+
 codesend = lib.codesend
 codesend.restype = c_int
 
