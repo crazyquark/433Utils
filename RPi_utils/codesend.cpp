@@ -37,7 +37,7 @@ int main(int argc, char *argv[]) {
         printf("decimalcode\t- As decoded by RFSniffer\n");
         printf("protocol\t- According to rc-switch definitions\n");
         printf("pulselength\t- pulselength in microseconds\n");
-        printf("repeat\t - repeat message this many times\n")
+        printf("repeat\t - repeat message this many times\n");
         return -1;
     }
 
