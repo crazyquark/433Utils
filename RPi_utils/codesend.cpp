@@ -33,11 +33,11 @@ int main(int argc, char *argv[]) {
 
     // If no command line argument is given, print the help text
     if (argc == 1) {
-        printf("Usage: %s decimalcode [protocol] [pulselength]\n", argv[0]);
+        printf("Usage: %s decimalcode [protocol] [pulselength] [repeat]\n", argv[0]);
         printf("decimalcode\t- As decoded by RFSniffer\n");
         printf("protocol\t- According to rc-switch definitions\n");
         printf("pulselength\t- pulselength in microseconds\n");
-        printf("repeat\t- repeat message this many times\n");
+        printf("repeat\t\t- repeat message this many times\n");
         return -1;
     }
 
